@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    h1 {
+      @apply text-2xl;
+      @apply text-red-600;
+      @apply text-center;
+    }
+    
+    h2 {
+      @apply text-xl;
+      @apply text-center;
+      @apply my-3;
+      @apply font-bold;
+      @apply pb-1;
+      @apply border-b-2;
+    }
+    
+    h3{
+      @apply font-bold;
+      @apply my-3;
+    }
+    
+    p {
+      @apply text-justify;
+      @apply mb-3;
+    }   
+        
+    a{
+      @apply underline;
+      @apply text-blue-600;
+      @apply dark:text-blue-500;
+            
+    }       
+}
+
+@layer components{
+  
+  .sideNote{
+    @apply border-l-[5px];
+    @apply border-gray-500;
+    @apply bg-slate-300;
+    @apply mx-4;
+    @apply lg:mx-14;
+    @apply px-3;
+    @apply lg:py-1;
+    @apply dark:border-blue-500;
+    @apply dark:bg-sky-950;
+    @apply py-1.5;
+  }
+  
+  .display-none{
+    @apply hidden;
+  }
+
+  .navBarHidden{
+    @apply -translate-y-full;
+    @apply transition;
+    @apply ease-in-out;
+    @apply delay-150;
+    @apply duration-200;
+  }
+
+  .navBarShow{
+    @apply translate-y-0;
+    @apply transition;
+    @apply ease-in-out;
+    @apply delay-150;
+    @apply duration-200;
+  }
+}
+

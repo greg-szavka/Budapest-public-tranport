@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en" class="dark:visited:text-sky-950"
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/output.css">
+    <title>Budapest Public transport</title>    
+</head>
+<body class="dark:bg-dark-bg dark:text-white md:text-xl lg:text-base">
+    <div>
+        <header class="sticky top-0 z-50">                        
+            <nav class="sticky top-0 left-0 z-50 w-full bg-white border-gray-200 dark:bg-dark-bg dark:border-gray-700">
+                <div>
+                    <h2 class="px-3 pt-2 mb-0 text-2xl uppercase border-none dark:text-white">Budapest Public Transport</h2>
+                </div>
+                <div class="flex flex-wrap items-center h-24 p-4 mx-auto ma2x-w-screen-xl md:h-fit md:justify-center 2xl:justify-evenly md:p-4 md:pt-0">                   
+                        <button data-collapse-toggle="navbar-multi-level" type="button" class="p-2 ml-3 text-sm text-gray-500 rounded-lg pt- md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-multi-level" aria-expanded="false">
+                            <span class="sr-only">Open main menu</span>
+                        <svg class="w-10 h-10" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+                        </button>
+                    <div class="z-30 flex-wrap hidden w-full mt-2 transition-all duration-500 ease-in-out bg-white md:block md:w-auto dark:bg-gray-900" id="navbar-multi-level">
+                        <ul class="flex flex-col p-4 font-medium transition-all duration-500 ease-in-out border border-gray-100 rounded-lg md:p-0 md:flex-row md:space-x-8 md:mt-0 md:border-0 dark:border-gray-700 md:flex-wrap">                            
+                            <li>
+                                <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-900 border-b border-gray-100 ddNavbar hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent md:content-center lg:content-normal">Tickets and prices<svg class="w-5 h-5 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+                                <!-- Dropdown menu -->
+                                <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-900 dark:divide-gray-600">
+                                    <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                                        <li>
+                                            <a href="#Single_ticket" class="block px-4 py-2 dark:text-white md:dark:hover:text-blue-500">Single ticket (Vonaljegy)</a>
+                                        </li>
+                                        <li aria-labelledby="dropdownNavbarLink">                                
+                                        </li>
+                                        <li>
+                                            <a href="#Travelcards" class="block px-4 py-2 dark:text-white md:dark:hover:text-blue-500">Travelcards</a>
+                                        </li>
+                                        <li>
+                                            <a href="#Time_based" class="block px-4 py-2 dark:text-white md:dark:hover:text-blue-500">Time based tickets</a>
+                                        </li>
+                                        <li>
+                                            <a href="#Passes" class="block px-4 py-2 dark:text-white md:dark:hover:text-blue-500">Monthly passes</a>
+                                        </li>
+                                        <li>
+                                            <a href="#Major_tickets" class="block px-4 py-2 dark:text-white md:dark:hover:text-blue-500">Major tickets and their prices</a>
+                                        </li>
+                                        <li>
+                                            <a href="#County_passes" class="block px-4 py-2 dark:text-white md:dark:hover:text-blue-500">County and country passes</a>
+                                        </li>
+                                    </ul>                            
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#How_to_buy" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent md:content-center lg:content-normal">How to buy a ticket</a>
+                            </li>
+                            <li>
+                                <a href="#Validate" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent md:content-center lg:content-normal">How to validate your ticket</a>
+                            </li>
+                            <li>
+                                <a href="#BPGO" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent md:content-center lg:content-normal">BudapestGO</a>
+                            </li>
+                            <li>
+                                <a href="#Penalty" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent md:content-center lg:content-normal">Penalty fares</a>
+                            </li>
+                            
+                            <li>
+                                <button id="doubleDropdownButton" data-dropdown-toggle="doubleDropdown" class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-900 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent md:content-center lg:content-normal">Public transports<svg class="w-5 h-5 ml-1" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+                                <!-- Dropdown menu -->
+                                <div id="doubleDropdown" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow ddNavbar w-44 dark:bg-gray-900 dark:divide-gray-600">
+                                    <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                                        <li>
+                                            <a href="#Metros" class="block px-4 py-2 dark:text-white md:dark:hover:text-blue-500">Metros</a>
+                                        </li>
+                                        <li aria-labelledby="dropdownNavbarLink">                                
+                                        </li>
+                                        <li>
+                                            <a href="#Trams" class="block px-4 py-2 dark:text-white md:dark:hover:text-blue-500">Trams</a>
+                                        </li>
+                                        <li>
+                                            <a href="#Buses" class="block px-4 py-2 dark:text-white md:dark:hover:text-blue-500">Buses</a>
+                                        </li>
+                                        <li>
+                                            <a href="#Boats" class="block px-4 py-2 dark:text-white md:dark:hover:text-blue-500">Boats</a>
+                                        </li>
+                                        <li>
+                                            <a href="#HEV" class="block px-4 py-2 dark:text-white md:dark:hover:text-blue-500">Suburban railways (HÉV)</a>
+                                        </li>
+                                        <li>
+                                            <a href="#Bikes" class="block px-4 py-2 dark:text-white md:dark:hover:text-blue-500">Bikes on board</a>
+                                        </li>
+                                        <li>
+                                            <a href="#Dogs" class="block px-4 py-2 dark:text-white md:dark:hover:text-blue-500">Dogs on public transport</a>
+                                        </li>
+                                        <li>
+                                            <a href="#Other" class="block px-4 py-2 dark:text-white md:dark:hover:text-blue-500">Other interesting public transports:</a>
+                                        </li>
+                                    </ul>                            
+                                </div>
+                            </li>
+                            <li>
+                                <div class="block dark:text-white">
+                                    <p class="m-0 text-center font-xs lg:font-sm md:content-center lg:content-normal">Updated: 03.01.2024</p>
+                                </div>
+                            </li>
+                        </ul>                        
+                    </div>
+                    <div class="absolute right-0 z-40 p-1 px-3 m-1 mr-4 rounded-full cursor-pointer themeSwitcher hover:bg-blue-500 md:static lg:mr-1">                      
+                        
+                        <svg id="sun" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,256,256" class="w-8 h-8 lg:w-6 lg:h-6" fill-rule="nonzero"><g fill="#fcc419" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M24.90625,3.96875c-0.04297,0.00781 -0.08594,0.01953 -0.125,0.03125c-0.46484,0.10547 -0.79297,0.52344 -0.78125,1v6c-0.00391,0.35938 0.18359,0.69531 0.49609,0.87891c0.3125,0.17969 0.69531,0.17969 1.00781,0c0.3125,-0.18359 0.5,-0.51953 0.49609,-0.87891v-6c0.01172,-0.28906 -0.10547,-0.56641 -0.3125,-0.76172c-0.21094,-0.19922 -0.49609,-0.29687 -0.78125,-0.26953zM10.65625,9.84375c-0.375,0.06641 -0.67578,0.33984 -0.78125,0.70313c-0.10547,0.36719 0.00391,0.75781 0.28125,1.01563l4.25,4.25c0.24219,0.29688 0.62891,0.43359 1.00391,0.34766c0.37109,-0.08594 0.66406,-0.37891 0.75,-0.75c0.08594,-0.375 -0.05078,-0.76172 -0.34766,-1.00391l-4.25,-4.25c-0.20703,-0.22266 -0.50781,-0.33594 -0.8125,-0.3125c-0.03125,0 -0.0625,0 -0.09375,0zM39.03125,9.84375c-0.22656,0.03125 -0.4375,0.14453 -0.59375,0.3125l-4.25,4.25c-0.29687,0.24219 -0.43359,0.62891 -0.34766,1.00391c0.08594,0.37109 0.37891,0.66406 0.75,0.75c0.375,0.08594 0.76172,-0.05078 1.00391,-0.34766l4.25,-4.25c0.3125,-0.29687 0.40234,-0.76172 0.21875,-1.15234c-0.1875,-0.39453 -0.60156,-0.62109 -1.03125,-0.56641zM25,15c-5.51562,0 -10,4.48438 -10,10c0,5.51563 4.48438,10 10,10c5.51563,0 10,-4.48437 10,-10c0,-5.51562 -4.48437,-10 -10,-10zM4.71875,24c-0.55078,0.07813 -0.9375,0.58984 -0.85937,1.14063c0.07813,0.55078 0.58984,0.9375 1.14063,0.85938h6c0.35938,0.00391 0.69531,-0.18359 0.87891,-0.49609c0.17969,-0.3125 0.17969,-0.69531 0,-1.00781c-0.18359,-0.3125 -0.51953,-0.5 -0.87891,-0.49609h-6c-0.03125,0 -0.0625,0 -0.09375,0c-0.03125,0 -0.0625,0 -0.09375,0c-0.03125,0 -0.0625,0 -0.09375,0zM38.71875,24c-0.55078,0.07813 -0.9375,0.58984 -0.85937,1.14063c0.07813,0.55078 0.58984,0.9375 1.14063,0.85938h6c0.35938,0.00391 0.69531,-0.18359 0.87891,-0.49609c0.17969,-0.3125 0.17969,-0.69531 0,-1.00781c-0.18359,-0.3125 -0.51953,-0.5 -0.87891,-0.49609h-6c-0.03125,0 -0.0625,0 -0.09375,0c-0.03125,0 -0.0625,0 -0.09375,0c-0.03125,0 -0.0625,0 -0.09375,0zM15,33.875c-0.22656,0.03125 -0.4375,0.14453 -0.59375,0.3125l-4.25,4.25c-0.29687,0.24219 -0.43359,0.62891 -0.34766,1.00391c0.08594,0.37109 0.37891,0.66406 0.75,0.75c0.375,0.08594 0.76172,-0.05078 1.00391,-0.34766l4.25,-4.25c0.29688,-0.28516 0.38672,-0.72656 0.22656,-1.10547c-0.15625,-0.37891 -0.53516,-0.62109 -0.94531,-0.61328c-0.03125,0 -0.0625,0 -0.09375,0zM34.6875,33.875c-0.375,0.06641 -0.67578,0.33984 -0.78125,0.70313c-0.10547,0.36719 0.00391,0.75781 0.28125,1.01563l4.25,4.25c0.24219,0.29688 0.62891,0.43359 1.00391,0.34766c0.37109,-0.08594 0.66406,-0.37891 0.75,-0.75c0.08594,-0.375 -0.05078,-0.76172 -0.34766,-1.00391l-4.25,-4.25c-0.1875,-0.19922 -0.44531,-0.30859 -0.71875,-0.3125c-0.03125,0 -0.0625,0 -0.09375,0c-0.03125,0 -0.0625,0 -0.09375,0zM24.90625,37.96875c-0.04297,0.00781 -0.08594,0.01953 -0.125,0.03125c-0.46484,0.10547 -0.79297,0.52344 -0.78125,1v6c-0.00391,0.35938 0.18359,0.69531 0.49609,0.87891c0.3125,0.17969 0.69531,0.17969 1.00781,0c0.3125,-0.18359 0.5,-0.51953 0.49609,-0.87891v-6c0.01172,-0.28906 -0.10547,-0.56641 -0.3125,-0.76172c-0.21094,-0.19922 -0.49609,-0.29687 -0.78125,-0.26953z"></path></g></g></svg>
+
+                        <svg id="moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" class="w-8 h-8 lg:w-6 lg:h-6"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"/></svg>
+                    </div>                    
+                </div>
+            </nav>            
+        </header>           
+                        
+        <main>
+            <div class="flex-wrap max-w-[85%]  lg:max-w-[75%] flex mx-auto mt-10 z-20">
+                <div id="Tickets" class="container mx-auto">
+                    <h2>SZIGET FESTIVAL</h2>
+                    <p>
+                        You can find travel informations on the <a href="https://szigetfestival.com/hu/travel">official websites's of the festival</a>. However, the site does not load in for me, so i will write down a few things.
+                        <ul>
+                            <li>
+                                <h4>Car:</h4>
+                                <p>I do not recommend it, but you can buy a car parking ticket.</p>
+                            </li>
+                            <li>
+                                <h4></h4>
+                            </li>
+                        </ul>
+                        Sziget CityPass by Budapest Card
+                        You can travel free on public transports with it and it gives you some discount in some places, so if you want to explore Budapest, then i can recommend.
+                    </p>
+                    <h3 class="px-2 text-center bg-red-600">The <a href="https://bkk.hu/en/tickets-and-passes/prices/">BKK's website</a> now has a good feature. You select that you are an adult or others, and it will recommend you tickets.</h3>
+                    <a name ="#Single_ticket"></a>
+                    <h2>Single ticket (Vonaljegy)</h2>
+                    <p>
+                        Single ticket is 450 HUF, 600 HUF, if you buy it from the driver on board (vehicle like bus, or tram). It is valid for one uninterrupted trip. It is also available in block of 10 for 4000 HUF. With this ticket, you can buy suburban railway extension ticket from the ticket inspector, but only when you came from Budapest. (For example you travel from Szentendre to Batthyány tér, you must to have pre-purchased ticket). <a href="https://bkk.hu/en/tickets-and-passes/prices/single-tickets-valid-for-one-ride/single-ticket.3/" target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">Read more</a>
+                        
+                    </p>                   
+
+                    <a name ="Travelcards"></a>
+                    <h2>Travelcards</h2>
+                    <p>
+                        These are the best options for you, if you have come to Budapest for a few days. You can use them for unlimited trip until they are valid. It does not require validation before travel. The best travelcards are <a href="https://bkk.hu/en/tickets-and-passes/prices/travelcards-valid-for-one-or-more-days/24-hour-budapest-travelcard.32/" target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">24-hour</a>, and <a href="https://bkk.hu/en/tickets-and-passes/prices/travelcards-valid-for-one-or-more-days/72-hour-budapest-travelcard.33/" target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">72-hour</a> Budapest-travelcard. You can buy <a href="https://bkk.hu/en/tickets-and-passes/prices/travelcards-valid-for-one-or-more-days/budapest-24-hour-group-travelcard.36/" target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">Budapest 24-hour group travelcard</a>, which good up to 5 passengers travelling together in the same vehicle (in case of trains in the same carriage). You can buy a non-transferable, personalized Budapest Cards too. These travelcards are not the same as Budapest travelcards. In addition to free public transport, several other services are offered through Budapest cards, such as free and discounted entry to museums and thermal baths as well as discounted meals and cultural events. You can read more <a href="https://www.budapestinfo.hu/en/budapest-card" target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">here</a>.                       
+                        <br>
+                        Read more about <a href="https://bkk.hu/en/tickets-and-passes/prices/travelcards-valid-for-one-or-more-days/" target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">travelcards.</a>
+                    </p>
+
+                    <a name ="Time_based"></a>
+                    <h2>Time based tickets</h2>
+                    <p>
+                        These tickets are only available in the mobile apps. You can choose between the 30-minute and 90-minute ticket. You have to scan the QR codes each time, when you board a vehicle. You can use it for an unlimited number of transfers and trip interruptions, in addition you can finish your trip beyond the time limit until you reach your destination within Budapest. With the first validation, the timer starts.
+
+                        <a href="https://bkk.hu/en/tickets-and-passes/prices/time-based-tickets/30-minute-ticket.7352/" target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">Read more</a>
+                    </p>
+                    
+                    <a name ="Passes"></a>
+                    <h2>Monthly passes</h2>
+                    <p>
+                        Best option for longer stay. It is valid for 1 month from midnight on the indicated day.
+                        <a href="https://bkk.hu/en/tickets-and-passes/prices/monthly-passes/monthly-budapest-pass.58/" target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">Read more</a>
+                    </p>
+                    
+                    <p>
+                        Read more about all <a href="https://bkk.hu/en/tickets-and-passes/prices/" target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">tickets and passes</a>
+                    </p>
+                    
+                    <a name ="Major_tickets"></a>
+                    <h2>Major tickets and their prices:</h2>
+                    <table class="table-auto border min-w-[50%] content-center mx-auto my-5">
+                        <thead>
+                            <tr>
+                                <th colspan="2" class="border border-r-0 dark:border-4 bg-slate-300 dark:bg-sky-950 dark:border-sky-950">Ticket name:</th>
+                                <th class="border border-l-0 dark:border-4 bg-slate-300 dark:bg-sky-950 dark:border-sky-950">Ticket price (HUF):</th>
+                            </tr>
+                        </thead>
+                        <tbody>                    
+                            <tr>
+                                <td colspan="2" class="pl-2 border dark:border-4 dark:border-sky-950">                           
+                                    Single tickets (Vonaljegy)                            
+                                </td>
+                                <td class="text-center border dark:border-4 dark:border-sky-950">450</td>
+                            </tr>
+
+                            <tr>
+                                <td colspan="2" class="pl-2 border dark:border-4 dark:border-sky-950">                        
+                                    Airport shuttle bus single ticket                       
+                                </td>
+                                <td class="text-center border dark:border-4 dark:border-sky-950">2200</td>
+                            </tr>                           
+
+                            <tr>
+                                <td rowspan="3" class="pl-2 border dark:border-4 dark:border-sky-950">                        
+                                    Travelcards                        
+                                </td>
+                                <td class="pl-2 border dark:border-4 dark:border-sky-950">24 hours</td>
+                                <td class="text-center border dark:border-4 dark:border-sky-950">2500</td>
+                            </tr>
+                            <tr>
+                                <td class="pl-2 border dark:border-4 dark:border-sky-950">72 hours</td>
+                                <td class="text-center border dark:border-4 dark:border-sky-950">5500</td>
+                            </tr>
+                            <tr>
+                                <td class="pl-2 border dark:border-4 dark:border-sky-950">7 days </td>
+                                <td class="text-center border dark:border-4 dark:border-sky-950">6500</td>
+                            </tr>                            
+
+                            <tr>
+                                <td rowspan="2" class="pl-2 border dark:border-4 dark:border-sky-950">                        
+                                    Time based tickets                        
+                                </td>
+                                <td class="pl-2 border dark:border-4 dark:border-sky-950">30 minutes</td>
+                                <td class="text-center border dark:border-4 dark:border-sky-950">530</td>
+                            </tr>
+                            <tr>
+                                <td class="pl-2 border dark:border-4 dark:border-sky-950">90 minutes</td>
+                                <td class="text-center border dark:border-4 dark:border-sky-950">750</td>
+                            </tr>
+                            
+                            <tr>
+                                <td colspan="2" class="pl-2 border dark:border-4 dark:border-sky-950">                                                        
+                                    Monthly passes                        
+                                </td>
+                                <td class="text-center border dark:border-4 dark:border-sky-950"><a href="https://bkk.hu/en/tickets-and-passes/prices/monthly-passes/" target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">prices</a></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                    <a name ="County_passes"></a>
+                    <h2>County and country passes</h2>                    
+                    <p>
+                        They are valid for 30 days, like the normal passes. The county pass costs for 9450 HUF, the country costs double that price, 18900 HUF. With student discount 945 HUF and 1890 HUF. Student discount is only available with hungarian student ID, but full priced passes are also available for foreigners. They are not valid on the 100E Airport Express buses, but you can use it on other lines. You can travel on trains too, but maybe you need to pay seat reservation. They are valid on suburban railways (HÉV) too, and also outside the administrative boundaries of Budapest, so you do not need to buy a Suburban railway extension ticket. If you have hungarian student ID, this is absolutely worth it for you. If you are an adult and you will not travel outside the administrative boundaries of Budapest, maybe an other type of ticket is better for you.                        
+                    </p>
+                    <h3>Where are they valid?</h3>
+                    <ul class="ml-12 list-disc">
+                        <li>On 2nd class trains which do not requires seat reservation</li>
+                        <li>On HÉV lines outside the administrative boundaries of Budapest</li>
+                        <li>On "blue buses" outside the administrative boundaries of Budapest</li>
+                        <li>On Volánbusz ("yellow buses") lines and on Weekendbus Zrt.'s (Budapest-Csömör; Csömör-Pécel) buses </li>
+                    </ul>
+                    <h3>Where are they invalid?</h3>
+                    <ul class="ml-12 list-disc">
+                        <li>On 1st class and trains which requires sear reservation</li>
+                        <li>On HÉV lines within the administrative boundaries of Budapest</li>
+                        <li>On "blue buses" within the administrative boundaries of Budapest</li>
+                        <li>On domestic city services</li>
+                    </ul>
+                </div>
+
+                <div id="How_to_buy" class="container mx-auto">
+                    <h2>How to buy tickets</h2>                    
+                    <p>You will find Ticket Offices in larger centers like Batthyány tér (<a href="https://bkk.hu/downloads/12775/" target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">link for all Ticket Office</a>).</p>
+
+                    <p class="sideNote">
+                        <span class="pl-3 font-bold text-red-600 dark:text-red-500">Side note:</span> Most cashiers only speak Hungarian
+                    </p>
+
+                    <p>
+                        Easier and faster way is the ticket vending machine. These machines work with touchscreens, and accept cash and cards too. You can choose between Hungarian, English, German, France, Chinese, Slovakian, Romanian, Spanish and Russian languages. In the main menu, you can find the most popular ticket types and passes. If you pay with cash, the machine defines the banknotes to be accepted based on the total value of the purchase. The machine gives back changes, and accepts 35 coins and 15 bank notes per transaction. The machine can gives invoice.
+                    </p>
+
+                    <p class="sideNote">
+                        <span class="pl-3 font-bold text-red-600 dark:text-red-500">Side note:</span> You can find vending machines payment by card only. A sticker alert you, to the purchase method.
+                    </p>
+
+                    <p>
+                        <a href="https://www.youtube.com/watch?v=MoGq1wWhznc" target="_blank">Vending machine instruction video.</a>
+                    </p>
+
+                </div>
+
+                <div id="Validate" class="container mx-auto">
+                    <h2>How to validate your ticket</h2>
+                    <p>
+                        You must validate your ticket before your journey.
+                        <br>
+                        You can validate your ticket with validating machines. 
+                        <br>
+                        <span class="font-medium">On metro lines:</span>
+                        <br>
+                        At the metro station entrances you can see orange or yellow boxes. If you insert your ticket with the number grid, the machine will stamp a time and date on the ticket. On newer single tickets you will find a narrow instead of the number grid. 
+                        <br>
+                        <span class="font-medium">On other vehicles:</span>
+                        <br>
+                        On board, you will see orange or yellow boxes, like on metro lines. On HÉV lines, you will see the same boxes next to the doors, but they are not automatic. Insert the ticket with the side marked by an arrow and pull the black top of the box towards you. You made it well, if you hear a click sound, because it punch it.
+                        <a href="https://bkk.hu/en/tickets-and-passes/ticket-validation/" target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">Read more</a> about ticket validation (includes a video).
+                    </p>
+
+                    <p class="px-3 sideNote">
+                        <span class="font-bold text-red-600 dark:text-red-500">Side note:</span> At the top of the escalator ticket inspectors will most likely stop you to check whether you have validated your ticket.
+                        <br>
+                        If you need to transfer to a replacement vehicle (e.g. in the event of cancellation, breakdown, track closure), you can continue your journey with the ticket already validated, but you must re-validate the ticket by stamping its end without the number grid with the validator of the replacement vehicle.
+                    </p>
+                </div>
+
+                <div id="BPGO" class="container mx-auto">
+                    <h2>BudapestGO / Online tickets</h2>
+                    <p>
+                        With this app, you can buy tickets online. You can check the changes in traffic, and plan your sightseeing trip in Budapest with real-time data, so you will alwys know when you will arrive to your destination.
+                    </p>                    
+                    <p>
+                        The available tickets are:
+                        <ul class="ml-12 list-disc">
+                            <li>Single ticket</li>
+                            <li>30-minute ticket</li>
+                            <li>90-minute ticket</li>
+                            <li>Airport shuttle bus single ticket</li>
+                            <li>24-hour Budapest-travelcard</li>
+                            <li>72-hour Budapest-travelcard</li>                           
+                            <li>And lot of passes</li>
+                        </ul>
+                        
+                        How to validate your online ticket?
+                        <br>
+                        First of all you need network access. After that buy your ticket, scan the QR code which are on the outside of the doors, and show the moving animation to the ticket inspector or to the driver.
+                        <br>
+                        You can read more about <a href="https://bkk.hu/en/tickets-and-passes/budapestgo/" target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">BudapestGO.</a>
+                    </p>
+                    
+                    <p class="sideNote">
+                       <span class="pl-3 font-bold text-red-600 dark:text-red-500">Side note:</span> BudapestGO is only available in Hungarian and English.
+                    </p>
+                    
+                    <p>
+                        Alternative BPGO. I use <a href="https://menetrend.app/" target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">Menetrend.app</a> instead of BudapestGO. I have no idea, why, but i love it better. It is available on English, German, and Italian languages.   
+                    </p>
+                </div>
+
+                <div id="Penalty" class="container mx-auto">
+                    <h2>Penalty fares</h2>
+                    <p>
+                        If you do not have valid ticket and the ticket inspector catch you, you must pay penalty fares. The basic penalty fare is 25 000 HUF. If you pay on the spot, it is 12 000 HUF. If you pay it within 2 working days, then the penalty fare is also 12 000 HUF. You can pay with bank transfer, or in BKK Costumer Service Centres.
+                    </p>
+
+                    <p>
+                        Important! If you have valid pass that you have already bought, and you can present it at a BKK Costumer Service Centre within 2 working days, then you need to pay 2 000 HUF only. If you have annual, semester or quarterly pass, then it is 1 000 HUF.
+                    </p>
+                    <p>
+                        If you buy non-refundable annual pass on the day when you got penalty fare, and you present it at a BKK Costumer Service Centre within 2 working days, your penalty fare is only 1 000 HUF. With quaterly and semester passes, this price is 3 000 HUF, and woth montly pass, it is 6 000 HUF. 
+                    </p>
+
+                    <p class="sideNote">
+                        <span class="pl-3 font-bold text-red-600 dark:text-red-500">Side note:</span> Most ticket inspectors do not speak english.
+                    </p>
+                </div>
+
+                <div id="Metros" class="container mx-auto">                   
+                    <h2>Metros</h2>                    
+                    <p>Budapest has 4 metro lines.</p>
+                    <h3>M1:</h3>
+                    <p class="ml-3">M1 (yellow line) runs between Vörösmarty tér and Mexikói út. It is continental Europe's oldest underground railroad.</p>
+                    <p class="ml-3 italic font-semibold">Major stops and major facilities:</p>
+                    <ul class="ml-12 list-disc">
+                        <li>Vörösmarty tér: <a href="https://vigado.hu/web/en/mainpage" target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">Vigadó</a>, <a href="https://gerbeaud.hu/en/" target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">Gerbeaud Café</a>, <a href="https://www.vigszinhaz.hu/english/index.php" target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">Pesti Színház</a>, <a href="https://www.tripadvisor.com/Attraction_Review-g274887-d276823-Reviews-Vaci_Street-Budapest_Central_Hungary.html" target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">Váci street</a></li>
+                        <li>Deák Ferenc tér: <a href="https://oriaskerek.com/en/"target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">Budapest Eye</a>, <a href="https://www.kempinski.com/en/hotel-corvinus-budapest"target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">Kempinski Hotel</a>, <a href="https://www.orkenyszinhaz.hu/en" target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">Örkény István Színház</a>, Merlin Színház, <a href="https://www.tripadvisor.com/Attraction_Review-g274887-d2501174-Reviews-Underground_Railway_Museum-Budapest_Central_Hungary.html" target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">Underground Railway Museum</a></li>
+                        <li>Bajcsy-Zsilinszky út: <a href="https://www.bazilika.biz/en" target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">St Stephen's Basilica</a></li>
+                        <li>Opera: <a href="https://www.opera.hu/" target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">Opera House</a>, Central Színház, Újszínház, </li>
+                        <li>Oktogon: <a href="https://operett.hu/en" target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">Budapest Operetta Theatre</a></li>
+                        <li>Vörösmarty utca: <a href="https://www.terrorhaza.hu/en" target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">House of Terror Museum</a>, <a href="https://lisztmuseum.hu/en" target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">Liszt Ferenc Memorial Museum</a></li>
+                        <li>Kodály körönd: <a href="https://kodaly.hu/museum" target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">Zoltán Kodály Memorial Museum and Archives</a></li>
+                        <li>Hősök tere (Heroes Square): Heroes Square, <a href="https://www.mfab.hu/" target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">Museum of Fine Arts</a>, <a href="https://www.mucsarnok.hu/index1.php" target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">Műcsarnok</a>, <a href="https://www.mujegpalya.hu/en" target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">City park ice rink and boating lake</a>, 1956 Hungarian Revolution Monument</li>
+                        <li>Széchenyi fürdő: <a href="https://www.szechenyibath.hu/" target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">Széchenyi bath</a>, <a href="https://www.zoobudapest.com/en" target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">Budapest Zoo and Botanical Garden</a>, <a href="https://fnc.hu/en/" target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">Capital Circus of Budapest</a></li>
+                        <li>Mexikói út: BVSC Stadium</li>
+                    </ul>
+
+                    <h3>M2:</h3>
+                    <p class="ml-3">M2 (red line) runs between Déli pályaudvar (Southern Railway Station) and Örs vezér tere.</p>
+                    <p class="ml-3 italic font-semibold">Major stops and major facilities:</p>
+                    <ul class="ml-12 list-disc">
+                        <li>Kossuth Lajos tér: <a href="https://www.parlament.hu/web/house-of-the-national-assembly" target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">Parliament</a></li>
+                        <li>Deák Ferenc tér: <a href="https://oriaskerek.com/en/" target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">Budapest Eye</a>, <a href="https://www.kempinski.com/en/hotel-corvinus-budapest" target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">Kempinski Hotel</a>, <a href="https://www.orkenyszinhaz.hu/en" target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">Örkény István Színház</a>, Merlin Színház, <a href="https://www.tripadvisor.com/Attraction_Review-g274887-d2501174-Reviews-Underground_Railway_Museum-Budapest_Central_Hungary.html" target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">Underground Railway Museum</a></li>
+                        <li>Astoria: <a href="https://www.danubiushotels.com/en/our-hotels-budapest/danubius-hotel-astoria" target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">Hotel Astoria</a>, Dohány Street Synagogue</li>
+                        <li>Blaha Lujza tér: <a href="https://newyorkcafe.hu/en/" target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">New-York Café</a> </li>
+                        <li>Pillangó utca: <a href="https://kincsempark.hu/#" target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">Kincsem Park</a></li>                    
+                    </ul>
+
+                    <h3>M3:</h3>
+                    <p class="ml-3">M3 (blue line) runs between Újpest városközpont and Kőbány-Kispest.</p>
+                    <p class="ml-3 italic font-semibold">Major stops and major facilities:</p>
+                    <ul class="ml-12 list-disc">
+                        <li>Corvin-negyed: <a href="https://corvinsetany.hu/en/" target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">Corvin Promenade</a>, <a href="https://hdke.hu/en/" target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">Holocaust Memorial Center</a>,</li>
+                        <li>Kálvin tér: <a href="https://fszek.hu/en" target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">Metropolitan Ervin Szabó Library</a>, <a href="https://mnm.hu" target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">Hungarian National Museum</a></li>
+                        <li>Ferenciek tere: <a href="https://parisiudvarhotel.hu/main-page.html" target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">Párisi udvar</a>, <a href="https://www.tripadvisor.com/Attraction_Review-g274887-d5279902-Reviews-Klotild_Palaces-Budapest_Central_Hungary.html" target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">Klotild palaces</a>, <a href="https://pim.hu/en" target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">Petőfi Literary Museum</a> </li>
+                        <li>Deák Ferenc tér: <a href="https://oriaskerek.com/en/" target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">Budapest Eye</a>, <a href="https://www.kempinski.com/en/hotel-corvinus-budapest" target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">Kempinski Hotel</a>, <a href="https://www.orkenyszinhaz.hu/en" target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">Örkény István Színház</a>, Merlin Színház, <a href="https://www.tripadvisor.com/Attraction_Review-g274887-d2501174-Reviews-Underground_Railway_Museum-Budapest_Central_Hungary.html" target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">Underground Railway Museum</a></li>
+                        <li>Nyugati pályaudvar: Western Railway Station, <a href="https://westend.hu/en" target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">Westend Shopping Center</a> </li>                    
+                    </ul>
+
+                    <h3>M4:</h3>
+                    <p class="ml-3">M4 (green line) runs between Kelenföld vasútállomás (Kelenföld Railway Station) and Keleti Pályaudvar (Keleti Railway Station). M4 metros do not have drivers, they are full automatics.</p>
+                    <p class="ml-3 italic font-semibold">Major stops and major facilities:</p>
+                    <ul class="ml-12 list-disc">
+                        <li>Kelenföld vasútállomás: Kelenföld Railway Station </li>
+                        <li>Újbuda -központ: Allee Shopping Center</li>
+                        <li>Szent Gellért tér - Műegyetem: <a href="https://www.gellertbath.hu/" target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">Gellért Thermal Bath</a>, <a href="https://www.bme.hu/?language=en" target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">Budapest University of Technology and Economics</a></li>
+                        <li>Fővám tér: <a href="https://www.uni-corvinus.hu/?lang=en" target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">Corvinus University of Budapest</a> </li>
+                        <li>Kálvin tér: <a href="https://fszek.hu/en" target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">Metropolitan Ervin Szabó Library</a>, <a href="https://mnm.hu" target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">Hungarian National Museum</a></li>
+                        <li>Keleti Pályaudvar: Keleti Railway Station</li>                    
+                    </ul>
+                </div>
+
+                <div id="Trams" class="container mx-auto">
+                    <h2>Trams</h2>
+                    <p>
+                        Budapest has around 30 tram lines. Travelling by tram is slower but more spectacular than by metro, but well-developed. The yellow vehicles are emblematic of Budapest.
+                    </p>
+                    <p class="px-3 sideNote">
+                        <span class="font-bold text-red-600 dark:text-red-500">Side note:</span> Do not forget to press the buttons around the doors in time to signal that you want to get off at the next stop. If nobody stands at the station, and you did not press the button, then the tram will not stop.
+                    </p>
+                </div>
+
+                <div id="Buses" class="container mx-auto">
+                    <h2>Buses</h2>
+                    <p>
+                        Budapest's bus network, comprising over 200 separate routes and criss-crossing the entire city
+                        can bring you almost anywhere within the capital. Buses often get stuck in traffic jams in rush hours, and at such times they are crowded.
+                    </p>
+                    
+                    <h3>Airport buses: 100E and 200E</h3>
+                    <p>
+                        Airport shuttle bus 100E Airport Express runs between Liszt Ferenc International Airport and Deák Ferenc Tér in 24/7. Travel time: C. 30 minutes.
+                        <br>
+                        <span class="font-semibold">Stations:</span>
+                        <br>
+                        <span class="italic">Astoria:</span>
+                        <ul class="ml-12 list-disc">
+                            <li>To Deák Ferenc Tér, this stop is used for passenger drop-off only</li>
+                            <li>To Liszt Ferenc International Airport, buses serve this stop only between 00:12 and 04:32</li>
+                        </ul>
+                        <span class="italic">Kálvin Tér:</span>
+                        <ul class="ml-12 list-disc">
+                            <li>To Deák Ferenc Tér, this stop is used for passenger drop-off only</li>
+                        </ul>
+                    </p>
+                    <p class="sideNote"><span class="font-bold text-red-600 dark:text-red-500">Side note:</span> You need to buy a special ticket (Airport shuttle bus single ticket) for this line, which costs 2200 HUF. It can be obtained from anywhere including the mobile application too. </p>
+                    <p>
+                        Bus line 200E operates day and night between Liszt Ferenc International Airport and Kőbánya-Kispest. Single ticket, travelcard or pass required on this line. Airport shuttle bus single ticket is not accepted.
+                    </p>
+                    
+                    <h3>Night buses:</h3>
+                    <p>Night buses are marked between 900-999. Night bus stops are marked with a black and white owl symbol.</p>
+                    <p class="px-3 sideNote">
+                        <span class="font-bold text-red-600 dark:text-red-500">Side note:</span> Do not forget to press the buttons around the doors in time to signal that you want to get off at the next stop. If nobody stands at the stop, and you did not press the button, then the bus will not stop.
+                    </p>
+                </div>
+
+                <div id="Boats" class="container mx-auto">
+                    <h2 class="mx-auto">Boats</h2>
+                    <p>Ferry line D14 operates between Csepel-Királyerdő and Soroksár, Molnár-sziget.</p>
+                    <p>
+                        Full-fare ferry ticket costs 170 HUF, pupil ferry ticket and pensioner ferry ticket costs 110 HUF. Travelcards and passes are also accepted.
+                    </p>
+                </div>
+
+                <div id="HEV" class="container mx-auto">
+                    <h2>Suburban railways (HÉV)</h2>
+                    <p>
+                        Budapest has 4 suburban railway line: H5 (Batthyány tér - Szentendre), H6 (Közvágóhíd - Ráckeve), H7 (Boráros tér - Csepel) and H8-H9 (Örs vezér tere - Gödöllő/Csömör). 
+                    </p>
+                    <p>
+                        The H5 might be interesting for tourists. Szentendre is a charming town right on the Danube bank. Highly recommended to visit it for one day.
+                    </p>
+                    <p class="sideNote"><span class="font-bold text-red-600 dark:text-red-500">Side note:</span> You need to buy a special ticket outside the administrative boundaries of Budapest, named "Suburban railway extension ticket". You can buy these ticket from the ticket inspectors, but <span class="font-bold">only</span> when you travel from Budapest and have valid ticket or pass. Ticket purchase on board is also possible if you board at a stop where there is no ticket office or ticket vending machine available (E.g. Budakalász stop). These ticket does not require any kind of validation; ticket inspectors validate it.</p>
+                    <p>
+                        The full priced "Suburban railway extension ticket" costs 450 HUF, if you travel from Budapest to Szentendre. Check the <a href="https://bkk.hu/en/tickets-and-passes/prices/single-tickets-valid-for-one-ride/" target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">other ticket's price</a>
+                    </p>
+                    
+                    <h3>Newest Suburban railway tickets:</h3>
+                    <p>
+                        With "Suburban railway tour ticket" maximum 10 people can travel together outside the administrative boundaries of Budapest for an unlimited number of trips. It costs 6200 HUF and available on H5 or on H8,H9.
+                    </p>
+                    <p class="sideNote"><span class="font-bold text-red-600 dark:text-red-500">Side note:</span> Notice that it is not valid within the administrative boundaries of Budapest.</p>
+                </div>
+
+                <div id="Bikes" class="container mx-auto">
+                    <h2>Bikes on board</h2>
+                    <p>
+                        A validated single ticket or a cycle pass (540 HUF for one month) is required for bike transporting. The single ticket validated for the bicycle is valid on the full length of the suburban railway lines.
+                    </p>
+                    <p class="sideNote"><span class="font-bold text-red-600 dark:text-red-500">Side note:</span> You have to have one valid ticket or pass for your bike, and one for yourself.</p>
+                    
+                    <p>
+                        The transportation of bicycles is allowed only aboard vehicles marked with a bike pictogram, and one passenger can transport only one bike at a time.
+                    </p>
+                    
+                    <h3 class="text-center">On which lines can you transport bike?</h3>
+                    <table class="border-collapse border border-slate-900 max-w-[80%] mx-auto my-5 table-fixed whitespace-normal">
+                        <thead>
+                            <tr>
+                                <th class="w-1/5 border border-r-0 dark:border-4 dark:border-sky-950 bg-slate-300 dark:bg-sky-950"></th>
+                                <th class="w-2/5 border border-x-0 dark:border-4 dark:border-sky-950 bg-slate-300 dark:bg-sky-950">On workdays:</th>
+                                <th class="w-2/5 border border-l-0 dark:border-4 dark:border-sky-950 bg-slate-300 dark:bg-sky-950">At weekends and on public holidays:</th>
+                            </tr>
+                        </thead>
+                        <tbody class="break-words">                        
+                            <tr>
+                                <td class="font-bold border dark:border-4 dark:border-sky-950">                                    
+                                    HÉV:                                    
+                                </td>
+                                <td class="border dark:border-4 dark:border-sky-950">                                    
+                                    H5; H6; H7; H8; H9                                    
+                                </td>
+                                <td class="border dark:border-4 dark:border-sky-950">                                    
+                                    H5; H6; H7; H8; H9                                    
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="font-bold border dark:border-4 dark:border-sky-950">                                    
+                                    Trams:                                   
+                                </td>
+                                <td class="border dark:border-4 dark:border-sky-950">                                    
+                                    1; 1M; 12; 14; 17; 19; 41; 56; 56A; 59; 59A; 59B; 60; 61                                    
+                                </td>
+                                <td class="border dark:border-4 dark:border-sky-950">                                    
+                                    12; 14; 28; 28A; 37A; 41; 56A; 59; 59A; 60; 61                                    
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="font-bold border dark:border-4 dark:border-sky-950">                                    
+                                    Buses:                                    
+                                </td>
+                                <td class="border dark:border-4 dark:border-sky-950">                                    
+                                        <p class="break-normal">11; 21; 21A; 57; 65; 65A; 91; 102; 110; 111; 112; 128; 129; 137; 155; 156; 165; 212; 212A; 212B; 221; 237; 257; 291                                            
+                                        </p>                                    
+                                </td>
+                                <td class="border dark:border-4 dark:border-sky-950">                                    
+                                        <p class="break-normal">
+                                            11; 21; 57; 65; 65A; 91; 102; 110; 112; 128 129; 137; 155; 156; 165; 212; 221; 237; 257; 291
+                                        </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="font-bold border dark:border-4 dark:border-sky-950">                                    
+                                    Trolley Bus:                                   
+                                </td>
+                                <td class="border dark:border-4 dark:border-sky-950">77</td>
+                                <td class="border dark:border-4 dark:border-sky-950">77</td>
+                            </tr>
+                            <tr>
+                                <td class="font-bold border dark:border-4 dark:border-sky-950">                                    
+                                    Ferry:                                    
+                                </td>
+                                <td class="border dark:border-4 dark:border-sky-950">14</td>
+                                <td class="border dark:border-4 dark:border-sky-950">14</td>
+                            </tr>
+                        </tbody>
+                    </table>                                  
+                </div>
+                                
+                <div class="container flex flex-wrap justify-center mx-auto md:justify-between md:w-full">                    
+                    <div id="Dogs" class="order-1 text-center md:w-1/3">
+                        <h2>Dogs on public transport</h2>
+                        <a href="https://bkk.hu/en/travel-information/public-transport/dogs-on-public-transport/" target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">Dogs on public transport</a>
+                    </div>
+    
+                    <div id="Other" class="order-2 md:w-1/3">
+                        <h2>Other interesting public transports:</h2>
+                        <p>
+                            <ul class="mx-auto text-center list-inside">
+                                <li><a href="https://bkk.hu/en/travel-information/public-transport/funicular/" target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">Funicular</a></li>
+                                <li><a href="https://bkk.hu/en/travel-information/public-transport/chairlift/" target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">Chairlift</a></li>
+                                <li><a href="https://bkk.hu/nosztalgia/" target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">Heritage transport services</a></li>
+                                <li><a href="https://molbubi.hu/en/" target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">MOL Bubi</a></li>
+                                <li><a href="https://bkk.hu/en/travel-information/cars-and-freight-transport/taxi-services/" target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">Taxi services</a></li>
+                            </ul>                        
+                        </p>
+                    </div>
+    
+                    <div id="Useful" class="order-3 md:w-1/3">
+                        <h2>Useful links:</h2>
+                        <ul class="text-center">
+                            <li><a href="https://bkk.hu/en/" target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">BKK's official page</a></li>
+                            <li class="uppercase"><a href="https://go.bkk.hu/" target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">budapestgo</a></li>
+                            <li><a href="https://www.mav-hev.hu/en" target="_blank" class="dark:visited:text-blue-700 visited:text-purple-900">HÉV</a></li>
+                        </ul>
+                    </div>
+                </div> 
+                <button id="arrow-up" class="fixed bottom-8 right-6 md:bottom-20 md:right-20">                                        
+                    <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+                    class="w-16 h-16" viewBox="0 0 150.000000 150.000000"
+                    preserveAspectRatio="xMidYMid meet">
+                    <metadata>
+                    Created by potrace 1.10, written by Peter Selinger 2001-2011
+                    </metadata>
+                    <g transform="translate(0.000000,150.000000) scale(0.100000,-0.100000)"
+                    class="fill-black dark:fill-white" stroke="none">
+                    <path d="M580 1409 c-36 -10 -81 -24 -100 -31 -155 -58 -320 -223 -378 -378
+                    -68 -185 -68 -335 0 -520 44 -118 171 -266 283 -331 230 -131 480 -131 710 0
+                    77 44 192 159 236 236 131 230 131 480 0 710 -65 112 -213 239 -331 283 -148
+                    55 -298 66 -420 31z m270 -49 c19 -5 51 -13 70 -18 53 -14 150 -61 195 -96
+                    329 -255 339 -724 22 -993 -50 -42 -156 -100 -211 -114 -17 -4 -49 -13 -71
+                    -18 -51 -13 -179 -13 -230 0 -22 5 -54 14 -71 18 -55 14 -161 72 -211 114 -99
+                    84 -178 202 -205 307 -5 19 -13 51 -18 70 -12 45 -12 175 0 220 5 19 13 51 18
+                    70 48 186 235 373 422 422 19 5 49 13 65 18 41 11 182 12 225 0z"/>
+                    <path d="M596 1001 c-129 -129 -149 -162 -101 -169 15 -2 47 24 109 88 49 49
+                    92 90 97 90 5 0 10 -147 11 -327 l3 -328 25 0 25 0 3 328 c1 180 6 327 11 327
+                    5 0 48 -41 97 -90 90 -92 124 -109 132 -66 5 22 -243 276 -268 276 -8 0 -73
+                    -58 -144 -129z"/>
+                    </g>
+                    </svg>
+                </button>
+                                
+            </div>
+        </main>
+        
+        <footer>
+            <div class="w-full max-w-screen-xl mx-auto my-3">
+                <p class="text-center">Created by: Gergő Szávka</p>
+                <p class="mb-0 text-center">Resources:</p>
+                <ul class="flex flex-wrap items-center justify-center">
+                    <li><a href="https://bkk.hu/en/" target="_blank" class="mx-3 dark:visited:text-blue-700 visited:text-purple-900">BKK's official page</a></li>
+                    <li><a href="https://www.budapestinfo.hu/public-transport" target="_blank" class="mx-3 dark:visited:text-blue-700 visited:text-purple-900">budapestinfo.hu</a></li>
+                    <li><a href="https://www.budapestbylocals.com/budapest-public-transport/#ticketspasses" target="_blank" class="mx-3 dark:visited:text-blue-700 visited:text-purple-900">budapestbylocals.com</a></li>
+                    <li><a href="https://www.mav-hev.hu/en" target="_blank" class="mx-3 dark:visited:text-blue-700 visited:text-purple-900">MÁV HÉV</a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.6/flowbite.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
